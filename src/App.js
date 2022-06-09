@@ -15,9 +15,10 @@ function App() {
       <Header />
 
         <Routes>
+          <Route exact path="/" element={ <Maincreate /> } />
           <Route path="create" element={ <Maincreate /> } />
           <Route path="read" element={ <Mainread /> } />
-          <Route path="/" element={ <Maincreate /> } />
+          
         </Routes>
 
       <Footer />
