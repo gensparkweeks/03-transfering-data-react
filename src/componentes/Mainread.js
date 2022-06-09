@@ -1,23 +1,26 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function Mainread(){
 
     return(
 
         <>
-            <a href="index.html">create</a>
-
-                <h2>Reading contacts</h2>
+            <Link to="/create">
+                create
+            </Link>
                 
-                <div id="content">
+            <h2>Reading contacts</h2>
+            
+            <div id="content">
 
-                    <div>
-                        <ul class="content">
+                <div>
+                    <ul class="content">
 
-                        </ul>
-                    </div>
-
+                    </ul>
                 </div>
+
+            </div>
         </>
     )
 }

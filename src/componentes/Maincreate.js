@@ -1,10 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function Maincreate(){
 
     return (
         <>
-            <a href="contact.html">read</a>
+            <Link to="/read">
+                read
+            </Link>
             
             <section id="content">
 
