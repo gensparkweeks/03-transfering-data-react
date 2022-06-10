@@ -3,15 +3,25 @@ import { Link } from "react-router-dom"
 
 function Maincreate(){
 
+    const first = localStorage.getItem("first")
+    const last = localStorage.getItem("last")
+    const email = localStorage.getItem("email")
+    const dob = localStorage.getItem("dob")
+
     return (
         <>
+
             <Link to="/read">
                 read
+            </Link>
+
+            <Link to={`/url/${first}/${last}/${email}/${dob}`}>
+                url
             </Link>
             
             <section id="content">
 
-                <h2>Creating contacts</h2>
+                <h2>Creating contact</h2>
 
                 <div id="box">
                     

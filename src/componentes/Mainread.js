@@ -3,9 +3,12 @@ import { Link } from "react-router-dom"
 
 function Mainread(){
     
-    const fullName = localStorage.getItem("first")+" "+ localStorage.getItem("last")
+    const first = localStorage.getItem("first")
+    const last = localStorage.getItem("last")
     const email = localStorage.getItem("email")
     const dob = localStorage.getItem("dob")
+
+    const fullName = first + " "+ last
     
     return(
 
@@ -13,8 +16,12 @@ function Mainread(){
             <Link to="/create">
                 create
             </Link>
+
+            <Link to={`/url/${first}/${last}/${email}/${dob}`}>
+                url
+            </Link>
                 
-            <h2>Reading contacts</h2>
+            <h2>Contact from LocalSrore</h2>
             
             {/* <div id="content"> */}
 
