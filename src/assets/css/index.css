@@ -53,8 +53,7 @@ a {
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
-form input[type="number"],
-select {
+form input[type="number"] {
     padding: 5px;
     border: 1px solid #333;
     border-radius: 2px;

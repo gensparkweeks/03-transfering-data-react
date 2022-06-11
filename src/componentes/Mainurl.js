@@ -10,8 +10,9 @@ function Mainurl(){
 
     const fullName = first + " "+ last
 
-    while (dob.includes("/")){
-        dob.replace("/", "-")
+    let dob1 = dob
+    if (dob.includes("/")){
+        dob1 = dob.replaceAll("/", "-")
     }
    
     return(
@@ -31,7 +32,7 @@ function Mainurl(){
                 <ul class="ul-wrap">
                     <li>Full name: <strong>{fullName}</strong></li>
                     <li>Email: <strong>{email}</strong></li>
-                    <li>Date of Birth: <strong>{dob}</strong></li>
+                    <li>Date of Birth: <strong>{dob1}</strong></li>
                 </ul>
             </div>
 
