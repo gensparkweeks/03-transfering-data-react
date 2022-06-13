@@ -67,7 +67,7 @@ function Maincreate(){
                         <label htmlFor="email">Email <span>(required)</span></label>
 
                         <div>
-                            <input type="text"
+                            <input type="text" placeholder="user@server.com"
                                 {...register("email", 
                                     {
                                         required: true,
