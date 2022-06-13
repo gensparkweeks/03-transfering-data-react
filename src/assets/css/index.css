@@ -1,17 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 * {
     margin: 0px;
     padding: 0px;
@@ -19,13 +5,41 @@ code {
     background-color: rgb(235, 235, 242);
 }
 
-h1 {
-    margin: 0px auto;
-    padding: 29px 29px;
+.header {
     background-color: rgb(9, 9, 83);
-    border-bottom: 1px solid rgb(196, 199, 203);
-    color: aliceblue;
+    height: 104px;
+}
+
+.header h1 {
+    float: left;
+    background-color: rgb(9, 9, 83);
+    color: #ccc;
     font-size: 40px;
+    margin: 0px auto;
+    line-height: 104px;
+    padding-left: 30px;
+}
+
+.nav {
+    float: right;
+    background-color: rgb(9, 9, 83);
+    margin-right: 20px;
+    height: 50px;
+    transition: all 300ms;
+}
+
+.link {
+    background-color: rgb(9, 9, 83);
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 110px;
+    transition: all 300ms;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 h2 {
@@ -41,10 +55,19 @@ h2 {
     margin: 0px auto;
 }
 
-a {
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
+.page-not-found {
+    height: 400px;
+}
+
+.page-not-found h1 {
+    font-size: 60px;
+    padding-top: 130px;
+    text-align: center;
+}
+
+.page-not-found p {
+    padding-top: 10px;
+    text-align: center;
 }
 
 
@@ -79,8 +102,9 @@ form input[type="submit"]:hover {
     background-color: rgb(111, 111, 202);
 }
 
-#errorf {
-    margin-left: 40px;
+.error {
+    margin-left: 5px;
+    color: rgb(218, 65, 65);
 }
 
 
@@ -105,8 +129,8 @@ ul li {
 
 footer {
     font-family: Helvetica, Verdana;
-    color: white;
-    height: 70px;
+    color: #ccc;
+    height: 69px;
     background-color: rgb(9, 9, 83);
     margin: 0px auto;
     padding-left: 20px;
@@ -119,7 +143,7 @@ footer {
 footer span {
     background-color: rgb(9, 9, 83);
     font-size: 14px;
-    line-height: 70px;
+    line-height: 69px;
 }
 
 

@@ -1,39 +1,39 @@
 import React from "react"
-import { Link } from "react-router-dom"
 
 function Mainread(){
-    
-    const first = localStorage.getItem("first")
-    const last = localStorage.getItem("last")
-    const email = localStorage.getItem("email")
-    const dob = localStorage.getItem("dob")
 
+    let first, last, email, dob
+   
+    if (localStorage.getItem("first") === undefined || localStorage.getItem("first") < 1){
+        first = " "
+        last = " "
+        email = " "
+        dob = " "
+    }else{
+        first = localStorage.getItem("first")
+        last = localStorage.getItem("last")
+        email = localStorage.getItem("email")
+        dob = localStorage.getItem("dob")
+        
+    }
     const fullName = first + " "+ last
     
     return(
 
         <>
-            <Link to="/create">
-                create
-            </Link>
+           <section id="content">
 
-            <Link to={`/url/${first}/${last}/${email}/${dob}`}>
-                url
-            </Link>
-                
-            <h2>Contact from LocalSrore</h2>
-            
-            {/* <div id="content"> */}
-
+                <h2>Contact from LocalStore</h2>
                 <div>
-                    <ul class="ul-wrap">
+                    <ul className="ul-wrap">
                         <li>Full name: <strong>{fullName}</strong></li>
                         <li>Email: <strong>{email}</strong></li>
                         <li>Date of Birth: <strong>{dob}</strong></li>
                     </ul>
                 </div>
 
-            {/* </div> */}
+            </section>   
+            
         </>
     )
 }

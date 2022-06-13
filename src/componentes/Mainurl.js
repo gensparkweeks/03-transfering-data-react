@@ -1,40 +1,43 @@
 import React from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 function Mainurl(){
 
-    const first = useParams().first;
-    const last = useParams().last;
-    const email = useParams().email;
-    const dob = useParams().dob;
+    const params = useParams();
+ 
+    let first, last, email, dob
+
+    if (params.first.length < 1){
+        first = " "
+        last = " "
+        email = " "
+        dob = " "
+    }else{
+        first = params.first;
+        last =  params.last;
+        email = params.email;
+        dob =   params.dob;
+    }
 
     const fullName = first + " "+ last
 
-    let dob1 = dob
-    if (dob.includes("/")){
-        dob1 = dob.replaceAll("/", "-")
-    }
-   
     return(
 
         <>
-            <Link to="/read">
-                read
-            </Link>
-            
-            <Link to="/create">
-                create
-            </Link>
+            <section id="content">
                 
-            <h2>Contact from Url</h2>         
+                <h2>Contact from URL</h2>         
 
-            <div>
-                <ul class="ul-wrap">
-                    <li>Full name: <strong>{fullName}</strong></li>
-                    <li>Email: <strong>{email}</strong></li>
-                    <li>Date of Birth: <strong>{dob1}</strong></li>
-                </ul>
-            </div>
+                <div>
+                    <ul className="ul-wrap">
+                        <li>Full name: <strong>{fullName}</strong></li>
+                        <li>Email: <strong>{email}</strong></li>
+                        <li>Date of Birth: <strong>{dob}</strong></li>
+                    </ul>
+                </div>
+
+            </section>       
+            
 
         </>
     )
